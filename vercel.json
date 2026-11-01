@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "regions": ["sfo1"],
+  "regions": ["sin1"],
   "builds": [
     {
       "src": "index.js",
@@ -8,19 +8,9 @@
       "config": {
         "maxDuration": 300
       }
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "data.json",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "/data.json", "dest": "/data.json" },
-    { "src": "/index.html", "dest": "/index.html" },
     { "src": "/(.*)", "dest": "index.js" }
   ]
 }
